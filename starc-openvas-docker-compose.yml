@@ -19,11 +19,11 @@ services:
     volumes:
       - "openvas:/data"
       - type: bind
-        source: $HOME/Desktop/Tools/openvasstore/openvas/socket/gvmd
+        source: $HOME/openvasstore/openvas/socket/gvmd
         target: /run/gvmd
     container_name: openvas
     image: immauss/openvas:latest
-    restart: on-failure
+    restart: always
 
 volumes:
   openvas:
